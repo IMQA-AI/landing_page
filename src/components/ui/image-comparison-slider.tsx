@@ -121,7 +121,7 @@ export function ImageComparisonSlider({
                   src={beforeOverlay}
                   alt={beforeLabel}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top brightness-75"
                   draggable={false}
                   unoptimized={beforeOverlayIsGif}
                   quality={100}
