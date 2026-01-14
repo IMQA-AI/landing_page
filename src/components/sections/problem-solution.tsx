@@ -81,7 +81,7 @@ export function ProblemSolution() {
                   alt="IMQA Dashboard"
                   width={1200}
                   height={700}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>

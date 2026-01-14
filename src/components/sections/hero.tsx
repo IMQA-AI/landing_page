@@ -113,7 +113,7 @@ export function Hero() {
                     alt="IMQA Dashboard"
                     width={1000}
                     height={700}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain"
                     priority
                   />
                 </div>
