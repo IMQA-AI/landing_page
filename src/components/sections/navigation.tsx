@@ -94,6 +94,7 @@ export function Navigation() {
   const navLinks = [
     { label: "Features", href: "#features", dropdown: featuresDropdown },
     { label: "Resources", href: "#resources", dropdown: resourcesDropdown },
+    { label: "Pricing", href: "/pricing", dropdown: null },
     { label: "Docs", href: "#", dropdown: null },
     { label: "Enterprise", href: "#", dropdown: null },
   ];
@@ -136,16 +137,16 @@ export function Navigation() {
                     onMouseEnter={() => link.dropdown && handleMouseEnter(link.label)}
                     onMouseLeave={() => link.dropdown && handleMouseLeave()}
                   >
-                    <button
-                      className="flex items-center gap-1.5 px-4 py-2 text-[16px] rounded-md transition-colors hover:bg-white/[0.06]"
-                      style={{
-                        color: "rgba(250, 249, 246, 0.9)",
-                        letterSpacing: "0.00115em",
-                        lineHeight: "16px",
-                      }}
-                    >
-                      {link.label}
-                      {link.dropdown && (
+                    {link.dropdown ? (
+                      <button
+                        className="flex items-center gap-1.5 px-4 py-2 text-[16px] rounded-md transition-colors hover:bg-white/[0.06]"
+                        style={{
+                          color: "rgba(250, 249, 246, 0.9)",
+                          letterSpacing: "0.00115em",
+                          lineHeight: "16px",
+                        }}
+                      >
+                        {link.label}
                         <svg
                           width="11"
                           height="13"
@@ -160,8 +161,20 @@ export function Navigation() {
                             fill="rgba(250, 249, 246, 0.5)"
                           />
                         </svg>
-                      )}
-                    </button>
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="flex items-center px-4 py-2 text-[16px] rounded-md transition-colors hover:bg-white/[0.06]"
+                        style={{
+                          color: "rgba(250, 249, 246, 0.9)",
+                          letterSpacing: "0.00115em",
+                          lineHeight: "16px",
+                        }}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
 
                     {/* Dropdown Menu */}
                     <AnimatePresence>
