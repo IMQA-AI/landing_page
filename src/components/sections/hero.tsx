@@ -99,14 +99,14 @@ export function Hero() {
               <Image
                 src="/screenshots/hero-bg.jpg"
                 alt=""
-                width={1100}
-                height={800}
+                width={1400}
+                height={1000}
                 className="w-full h-auto object-cover"
                 priority
               />
 
               {/* Dashboard screenshot overlaid on scenic background */}
-              <div className="absolute inset-2 md:inset-3 lg:inset-4">
+              <div className="absolute inset-1 md:inset-2 lg:inset-3">
                 <div className="relative overflow-hidden shadow-2xl h-full" style={{ borderRadius: "8px" }}>
                   <Image
                     src="/screenshots/dashboard-hero.png"
