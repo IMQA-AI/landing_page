@@ -105,17 +105,16 @@ export function Hero() {
                 priority
               />
 
-              {/* Product tour GIF overlaid on scenic background */}
+              {/* Dashboard screenshot overlaid on scenic background */}
               <div className="absolute inset-4 md:inset-6 lg:inset-8">
                 <div className="relative rounded-xl overflow-hidden shadow-2xl h-full">
                   <Image
-                    src="/screenshots/product-tour.gif"
-                    alt="IMQA Product Tour"
+                    src="/screenshots/dashboard-hero.png"
+                    alt="IMQA Dashboard"
                     width={1000}
                     height={700}
                     className="w-full h-full object-cover object-top"
                     priority
-                    unoptimized
                   />
                 </div>
               </div>

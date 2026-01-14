@@ -77,7 +77,7 @@ export function ProblemSolution() {
             <div className="absolute inset-4 md:inset-8 lg:inset-12">
               <div className="relative rounded-xl overflow-hidden shadow-2xl h-full border border-white/10">
                 <Image
-                  src="/screenshots/dashboard.png"
+                  src="/screenshots/dashboard-hero.png"
                   alt="IMQA Dashboard"
                   width={1200}
                   height={700}
