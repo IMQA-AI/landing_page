@@ -75,13 +75,13 @@ export function ProblemSolution() {
 
             {/* Screenshot Overlay */}
             <div className="absolute inset-4 md:inset-8 lg:inset-12">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl h-full border border-white/10">
+              <div className="relative rounded overflow-hidden shadow-2xl border border-white/10">
                 <Image
                   src="/screenshots/dashboard-hero.png"
                   alt="IMQA Dashboard"
                   width={1200}
                   height={700}
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
