@@ -8,82 +8,61 @@ import Link from "next/link";
 
 const plans = [
   {
-    name: "Free",
-    price: "$0",
+    name: "Starter",
+    price: "$99",
+    priceAnnual: "$80",
     period: "/month",
-    description: "For individuals getting started with AI-powered testing",
-    cta: "Get Started",
+    description: "Solo founders & indie builders validating core user flows before release.",
+    cta: "Run QA Agent",
     ctaLink: "https://app.imqa.ai/signup",
     highlighted: false,
-    includedText: "Includes free credits",
+    includedText: "Includes:",
     features: [
-      "Up to 50 test runs/month",
-      "1 project",
-      "Basic test recorder",
-      "Community support",
-      "7-day test history",
-    ],
-  },
-  {
-    name: "Pro",
-    price: "$29",
-    priceAnnual: "$24",
-    period: "/month",
-    periodNote: "Pay as you go, starting at:",
-    description: "For developers who want flexible access to AI testing that scales",
-    cta: "Start Today",
-    ctaLink: "https://app.imqa.ai/signup",
-    highlighted: true,
-    badge: "Recommended",
-    includedText: "Everything in Free, plus:",
-    features: [
-      "1,000 test runs/month",
-      "Unlimited projects",
-      "Self-healing selectors",
-      "CI/CD integrations",
-      "Video recordings",
-      "Priority support",
-      "90-day test history",
-      "API access",
+      "Autonomous QA agent",
+      "Real browser execution",
+      "Video proof for every run",
+      "Plain-English → test steps",
+      "Self-healing execution",
+      "Limited monthly QA runs",
+      "Email support",
     ],
   },
   {
     name: "Team",
-    price: "$79",
-    priceAnnual: "$69",
-    period: "/user",
-    periodExtra: "/month",
-    periodNote: "Pay as you go, starting at:",
-    description: "For teams scaling AI-powered testing (up to 25 seats)",
-    cta: "Start Today",
+    price: "$199",
+    priceAnnual: "$160",
+    period: "/month",
+    description: "Early-stage product teams shipping weekly.",
+    cta: "Run QA Agent",
     ctaLink: "https://app.imqa.ai/signup",
-    highlighted: false,
-    includedText: "Everything in Pro, plus:",
+    highlighted: true,
+    badge: "Popular",
+    includedText: "Everything in Starter, plus:",
     features: [
-      "5,000 test runs/month",
+      "Higher QA run limits",
+      "Parallel test execution",
       "Team collaboration",
-      "Shared test libraries",
-      "Advanced analytics",
-      "Role-based access",
-      "SSO integration",
+      "Priority execution queue",
+      "Priority support",
     ],
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    period: "",
-    description: "For organizations needing advanced control, security, and scale",
-    cta: "Contact Sales",
-    ctaLink: "mailto:sales@imqa.ai",
+    name: "Scale",
+    price: "$349",
+    priceAnnual: "$280",
+    period: "/month",
+    description: "Growing SaaS teams with frequent releases and multiple critical flows.",
+    cta: "Run QA Agent",
+    ctaLink: "https://app.imqa.ai/signup",
     highlighted: false,
     includedText: "Everything in Team, plus:",
     features: [
-      "Unlimited test runs",
-      "Dedicated infrastructure",
-      "Custom integrations",
-      "SLA guarantee",
-      "Dedicated success manager",
-      "On-premise deployment",
+      "Much higher QA run limits",
+      "Faster execution",
+      "Multiple environments",
+      "Advanced run visibility (video + logs)",
+      "CI integrations",
+      "Slack notifications",
     ],
   },
 ];
@@ -94,7 +73,7 @@ export default function PricingPage() {
   return (
     <main className="min-h-screen" style={{ backgroundColor: "#121212" }}>
       <Navigation />
-      
+
       {/* Hero */}
       <section className="pt-24 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -161,13 +140,13 @@ export default function PricingPage() {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               />
             </div>
-            
+
             {/* Discount badge */}
             <span
               className="text-sm font-normal"
               style={{ color: "#d4a574" }}
             >
-              10% off
+              Save 20%
             </span>
           </motion.div>
         </div>
@@ -175,8 +154,8 @@ export default function PricingPage() {
 
       {/* Pricing Cards */}
       <section className="pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -216,14 +195,6 @@ export default function PricingPage() {
                         </span>
                       )}
                     </div>
-                    {plan.periodNote && (
-                      <p
-                        className="text-sm"
-                        style={{ color: "rgba(250, 249, 246, 0.5)" }}
-                      >
-                        {plan.periodNote}
-                      </p>
-                    )}
                   </div>
 
                   {/* Price */}
@@ -242,19 +213,11 @@ export default function PricingPage() {
                         {plan.period}
                       </span>
                     )}
-                    {plan.periodExtra && (
-                      <span
-                        className="text-base"
-                        style={{ color: "rgba(250, 249, 246, 0.5)" }}
-                      >
-                        {plan.periodExtra}
-                      </span>
-                    )}
                   </div>
 
                   {/* Description */}
                   <p
-                    className="text-sm mb-6 leading-relaxed"
+                    className="text-sm mb-6 leading-relaxed min-h-[40px]"
                     style={{ color: "rgba(250, 249, 246, 0.7)" }}
                   >
                     {plan.description}
