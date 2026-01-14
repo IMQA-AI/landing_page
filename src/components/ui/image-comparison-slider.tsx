@@ -172,7 +172,10 @@ export function ImageComparisonSlider({
       </div>
 
       {/* Labels */}
-      <div className="absolute top-4 left-4">
+      <div
+        className="absolute top-4 left-4 transition-opacity duration-200"
+        style={{ opacity: sliderPosition < 15 ? 0 : 1 }}
+      >
         <div
           className="inline-flex items-center px-4 py-2 text-sm font-medium"
           style={{
@@ -186,7 +189,10 @@ export function ImageComparisonSlider({
           {beforeLabel}
         </div>
       </div>
-      <div className="absolute top-4 right-4">
+      <div
+        className="absolute top-4 right-4 transition-opacity duration-200"
+        style={{ opacity: sliderPosition > 85 ? 0 : 1 }}
+      >
         <div
           className="inline-flex items-center px-4 py-2 text-sm font-medium"
           style={{
