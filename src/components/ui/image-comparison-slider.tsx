@@ -80,7 +80,7 @@ export function ImageComparisonSlider({
         />
         {/* Overlay GIF/Image */}
         {afterOverlay && (
-          <div className="absolute inset-4 md:inset-6 lg:inset-8 flex items-center justify-center">
+          <div className="absolute inset-8 md:inset-12 lg:inset-16 flex items-center justify-center">
             <div className="relative w-full h-full overflow-hidden shadow-2xl" style={{ borderRadius: "8px" }}>
               <Image
                 src={afterOverlay}
@@ -115,7 +115,7 @@ export function ImageComparisonSlider({
           />
           {/* Overlay GIF/Image */}
           {beforeOverlay && (
-            <div className="absolute inset-4 md:inset-6 lg:inset-8 flex items-center justify-center">
+            <div className="absolute inset-8 md:inset-12 lg:inset-16 flex items-center justify-center">
               <div className="relative w-full h-full overflow-hidden shadow-2xl" style={{ borderRadius: "8px" }}>
                 <Image
                   src={beforeOverlay}
