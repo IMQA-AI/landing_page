@@ -55,19 +55,18 @@ export function ImageComparisonSlider({
     <div
       ref={containerRef}
       className={`relative overflow-hidden select-none ${className}`}
-      style={{ borderRadius: "16px" }}
+      style={{ borderRadius: "16px", aspectRatio: "16 / 9" }}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
       {/* After Image (Right/Background) */}
-      <div className="relative w-full">
+      <div className="absolute inset-0">
         <Image
           src={afterImage}
           alt={afterLabel}
-          width={1400}
-          height={800}
-          className="w-full h-auto object-cover"
+          fill
+          className="object-cover"
           draggable={false}
         />
       </div>
@@ -84,9 +83,8 @@ export function ImageComparisonSlider({
           <Image
             src={beforeImage}
             alt={beforeLabel}
-            width={1400}
-            height={800}
-            className="w-full h-auto object-cover"
+            fill
+            className="object-cover"
             draggable={false}
           />
         </div>
