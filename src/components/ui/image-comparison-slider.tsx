@@ -9,6 +9,7 @@ interface ImageComparisonSliderProps {
   beforeLabel?: string;
   afterLabel?: string;
   className?: string;
+  afterIsGif?: boolean;
 }
 
 export function ImageComparisonSlider({
@@ -17,6 +18,7 @@ export function ImageComparisonSlider({
   beforeLabel = "Before",
   afterLabel = "After",
   className = "",
+  afterIsGif = false,
 }: ImageComparisonSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -68,6 +70,7 @@ export function ImageComparisonSlider({
           fill
           className="object-cover"
           draggable={false}
+          unoptimized={afterIsGif}
         />
       </div>
 

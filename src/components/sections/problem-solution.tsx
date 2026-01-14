@@ -49,9 +49,10 @@ export function ProblemSolution() {
         >
           <ImageComparisonSlider
             beforeImage="/screenshots/pexels-lastly-808466.jpg"
-            afterImage="/screenshots/pexels-mohamed-elshawry-10645-55367.jpg"
+            afterImage="https://xhwueqrzbgdvqaranpkl.supabase.co/storage/v1/object/public/imqa_cdn/Live_Agent.gif"
             beforeLabel="Traditional QA"
             afterLabel="IMQA"
+            afterIsGif
           />
         </motion.div>
 
