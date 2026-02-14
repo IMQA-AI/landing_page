@@ -24,7 +24,7 @@ const footerLinks = {
     { label: "Contact", href: "mailto:hello@imqa.ai" },
   ],
   Legal: [
-    { label: "Privacy", href: "#" },
+    { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "#" },
     { label: "Security", href: "/enterprise#security" },
   ],
